@@ -18,11 +18,14 @@ namespace NetApplication
 
 			FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
 			GlobalConfiguration.Configure(WebApiConfig.Register);
+			
 			RouteConfig.RegisterRoutes(RouteTable.Routes);
 
 			//App_Start.WebApiConfig.Register(GlobalConfiguration.Configuration);
 
 			BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+			//GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
 		}
 	}
 }
